@@ -18,5 +18,7 @@ Ir em gradlew e abrir um terminal e rodar ".\gradlew wrapper --gradle-version 7.
 
 Necessário em seguida o Java 11
 
+Alterar o arquivo app/build.gradle para: compileSdkVersion 31
+
 
 https://stackoverflow.com/questions/71535552/showing-this-gradle-error-when-trying-to-run-flutter-project
