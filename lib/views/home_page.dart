@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_facebook_responsive_ui/config/palette.dart';
+import 'package:flutter_facebook_responsive_ui/data/data.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/circle_button.dart';
+import 'package:flutter_facebook_responsive_ui/widgets/widgets.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class HomePage extends StatelessWidget {
@@ -25,9 +27,9 @@ class HomePage extends StatelessWidget {
             ),
             actions: [
               CircleButton(
-                  icon: Icons.search,
-                  iconSize: 30.0,
-                  onPressed: () => print("Search"),
+                icon: Icons.search,
+                iconSize: 30.0,
+                onPressed: () => print("Search"),
               ),
               CircleButton(
                 icon: MdiIcons.facebookMessenger,
@@ -35,6 +37,9 @@ class HomePage extends StatelessWidget {
                 onPressed: () => print("Messenger"),
               ),
             ],
+          ),
+          SliverToBoxAdapter(
+            child: CreatePostContainer(currentUser: currentUser),
           ),
         ],
       ),
