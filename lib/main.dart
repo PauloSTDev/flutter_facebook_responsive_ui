@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/config/palette.dart';
 import 'package:flutter_facebook_responsive_ui/views/home_page.dart';
-import 'package:flutter_facebook_responsive_ui/views/views.dart';
 
 void main() {
   runApp(MyApp());
