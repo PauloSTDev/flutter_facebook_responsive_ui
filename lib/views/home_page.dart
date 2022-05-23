@@ -42,11 +42,12 @@ class HomePage extends StatelessWidget {
           SliverToBoxAdapter(
             child: CreatePostContainer(currentUser: currentUser),
           ),
-
-          SliverToBoxAdapter(
-            child: Rooms(onlineUsers: onlineUsers),
+          SliverPadding(
+            padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
+            sliver: SliverToBoxAdapter(
+              child: Rooms(onlineUsers: onlineUsers),
+            ),
           ),
-
         ],
       ),
     );
