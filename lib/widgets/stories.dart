@@ -18,7 +18,7 @@ class Stories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 200.0,
-      color: Colors.grey,
+      color: Colors.white,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.symmetric(
@@ -94,7 +94,24 @@ class _StoryCard extends StatelessWidget {
                     onPressed: () => print("Add to Story"),
                   ),
                 )
-              : ProfileAvatar(imageUrl: story.imageUrl),
+              : ProfileAvatar(
+                  imageUrl: story.user.imageUrl,
+                  hasBorder: !story.isViewed,
+                ),
+        ),
+        Positioned(
+          bottom: 8.0,
+          left: 8.0,
+          right: 8.0,
+          child: Text(
+            isAddStory ? "Add to Story" : story.user.name,
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
       ],
     );
