@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/profile_avatar.dart';
@@ -14,9 +15,31 @@ class PostContainer extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       color: Colors.white,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          _PostHeader(post: post),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _PostHeader(post: post),
+                const SizedBox(
+                  height: 4.0,
+                ),
+                Text(post.caption),
+                post.imageUrl != null
+                    ? const SizedBox.shrink()
+                    : const SizedBox(
+                        height: 6.0,
+                      ),
+              ],
+            ),
+          ),
+          post.imageUrl != null
+              ? Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: CachedNetworkImage(imageUrl: post.imageUrl),
+              )
+              : SizedBox.shrink(),
         ],
       ),
     );
@@ -40,7 +63,12 @@ class _PostHeader extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(post.user.name),
+              Text(
+                post.user.name,
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
               Row(
                 children: [
                   Text(
@@ -61,8 +89,8 @@ class _PostHeader extends StatelessWidget {
           ),
         ),
         IconButton(
-            onPressed: () => print("More"),
-            icon: Icon(Icons.more_horiz),
+          onPressed: () => print("More"),
+          icon: Icon(Icons.more_horiz),
         ),
       ],
     );
