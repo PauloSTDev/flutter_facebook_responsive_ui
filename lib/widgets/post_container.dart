@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_responsive_ui/config/palette.dart';
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/profile_avatar.dart';
 
@@ -36,10 +37,14 @@ class PostContainer extends StatelessWidget {
           ),
           post.imageUrl != null
               ? Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8.0),
-                child: CachedNetworkImage(imageUrl: post.imageUrl),
-              )
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: CachedNetworkImage(imageUrl: post.imageUrl),
+                )
               : SizedBox.shrink(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 12.0),
+            child: _PostStats(post: post),
+          ),
         ],
       ),
     );
@@ -91,6 +96,52 @@ class _PostHeader extends StatelessWidget {
         IconButton(
           onPressed: () => print("More"),
           icon: Icon(Icons.more_horiz),
+        ),
+      ],
+    );
+  }
+}
+
+class _PostStats extends StatelessWidget {
+  final Post post;
+
+  const _PostStats({Key key, @required this.post}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            Container(
+              padding: EdgeInsets.all(4.0),
+              decoration: BoxDecoration(
+                color: Palette.facebookBlue,
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                Icons.thumb_up,
+                size: 10.0,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(width: 4.0,),
+            Expanded(
+              child: Text(
+                "${post.likes}",
+                style: TextStyle(color: Colors.grey[600]),
+              ),
+            ),
+            Text(
+              "${post.comments} Comments",
+              style: TextStyle(color: Colors.grey[600]),
+            ),
+            SizedBox(width: 8.0,),
+            Text(
+              "${post.shares} Shares",
+              style: TextStyle(color: Colors.grey[600]),
+            ),
+          ],
         ),
       ],
     );
