@@ -37,11 +37,17 @@ class _NavPageState extends State<NavPage> {
     return DefaultTabController(
       length: _icons.length,
         child: Scaffold(
-          body: _views[_selectedIndex],
-          bottomNavigationBar: CustomTabBar(
-            icons: _icons,
-            selectedIndex: _selectedIndex,
-            onTap: (index) => setState(()=> _selectedIndex = index)
+          body: TabBarView(
+            physics: NeverScrollableScrollPhysics(),
+            children: _views,
+          ),
+          bottomNavigationBar: Padding(
+            padding: const EdgeInsets.only(bottom: 12.0),
+            child: CustomTabBar(
+              icons: _icons,
+              selectedIndex: _selectedIndex,
+              onTap: (index) => setState(() => _selectedIndex = index),
+            ),
           ),
         ),
     );
