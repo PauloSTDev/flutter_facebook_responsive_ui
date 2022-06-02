@@ -6,6 +6,7 @@ import 'package:flutter_facebook_responsive_ui/models/models.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/circle_button.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/contacts_list.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/create_post_container.dart';
+import 'package:flutter_facebook_responsive_ui/widgets/more_options_list.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/post_container.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/responsive.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/rooms.dart';
@@ -124,8 +125,12 @@ class _HomeScreenDesktop extends StatelessWidget {
       children: [
         Flexible(
           flex: 2,
-          child: Container(
-            color: Colors.orange,
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: MoreOptionsList(currentUser: currentUser),
+            ),
           ),
         ),
         const Spacer(),
