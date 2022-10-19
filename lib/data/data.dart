@@ -1,9 +1,9 @@
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
 
 final User currentUser = User(
-  name: 'Marcus Ng',
+  name: 'Paulo Santos',
   imageUrl:
-      'https://images.unsplash.com/photo-1578133671540-edad0b3d689e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
+      './assets/Paulo.png',
 );
 
 final List<User> onlineUsers = [
@@ -28,33 +28,33 @@ final List<User> onlineUsers = [
         'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
   ),
   User(
-    name: 'Ed Morris',
+    name: 'Fred Barcelos',
     imageUrl:
-        'https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=664&q=80',
+        './assets/Fred.png',
   ),
   User(
-    name: 'Carolyn Duncan',
+    name: 'Paulo Rochenbach',
     imageUrl:
-        'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+        './assets/PauloRochenbach.png',
   ),
   User(
-    name: 'Paul Pinnock',
+    name: 'Camila Schmitt',
     imageUrl:
-        'https://images.unsplash.com/photo-1519631128182-433895475ffe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        './assets/Camila.png',
   ),
   User(
-      name: 'Elizabeth Wong',
+      name: 'Anita Nunes',
       imageUrl:
-          'https://images.unsplash.com/photo-1515077678510-ce3bdf418862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=675&q=80'),
+          './assets/Anita.png'),
   User(
-    name: 'James Lathrop',
+    name: 'Danubia Carvalho',
     imageUrl:
-        'https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=592&q=80',
+    './assets/Danubia.png',
   ),
   User(
-    name: 'Jessie Samson',
+    name: 'Gustavo Pereira',
     imageUrl:
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+      './assets/Gustavo.png',
   ),
   User(
     name: 'David Brooks',
@@ -167,9 +167,9 @@ final List<Story> stories = [
 final List<Post> posts = [
   Post(
     user: currentUser,
-    caption: 'Check out these cool puppers',
+    caption: 'Check out these cool cats',
     timeAgo: '58m',
-    imageUrl: 'https://images.unsplash.com/photo-1525253086316-d0c936c814f8',
+    imageUrl: './assets/posts/cats.jpeg',
     likes: 1202,
     comments: 184,
     shares: 96,
