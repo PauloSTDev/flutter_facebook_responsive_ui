@@ -2,5 +2,7 @@
 
 Projeto finalizado
 
-Tela: 
+Tela 1: 
 ![img.png](UI%20Images)
+
+Tela 2:
