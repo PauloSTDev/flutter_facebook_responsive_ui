@@ -26,7 +26,7 @@ class ProfileAvatar extends StatelessWidget {
             radius: hasBorder ? 17.0 : 20.0,
             backgroundColor: Colors.grey[200],
             backgroundImage: CachedNetworkImageProvider(imageUrl),
-            
+
           ),
         ),
         isActive ? Positioned(

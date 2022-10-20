@@ -3,7 +3,7 @@ import 'package:flutter_facebook_responsive_ui/models/models.dart';
 final User currentUser = User(
   name: 'Paulo Santos',
   imageUrl:
-      './assets/Paulo.png',
+      'https://instagram.fpoa5-1.fna.fbcdn.net/v/t51.2885-19/38247976_1065549663608622_79457586465734656_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fpoa5-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=sWRTCRM1K1UAX8vRBQZ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_hfFJrArzZiyQAkmUnqC7nTgkJqV5h5OYGxCQDJPE5JQ&oe=6355B503&_nc_sid=8fd12b',
 );
 
 final List<User> onlineUsers = [
@@ -30,31 +30,31 @@ final List<User> onlineUsers = [
   User(
     name: 'Fred Barcelos',
     imageUrl:
-        './assets/Fred.png',
+        'https://media-exp1.licdn.com/dms/image/C4E03AQFH6pLvqp18cw/profile-displayphoto-shrink_200_200/0/1659455649858?e=1671667200&v=beta&t=p3B3YSkm290go2oLOUyUgubIiRWSoFVRPoKDdEFjaAk',
   ),
   User(
     name: 'Paulo Rochenbach',
     imageUrl:
-        './assets/PauloRochenbach.png',
+        'https://media-exp1.licdn.com/dms/image/C4E03AQFH1XafQOev4Q/profile-displayphoto-shrink_200_200/0/1655153781809?e=1671667200&v=beta&t=3FRamwcwY1XKLV9so5gyp9Fh5zCbj6w7sI0MggRrFC4',
   ),
   User(
     name: 'Camila Schmitt',
     imageUrl:
-        './assets/Camila.png',
+        'https://media-exp1.licdn.com/dms/image/C4E03AQGDthtepHAjCg/profile-displayphoto-shrink_200_200/0/1637102974045?e=1671667200&v=beta&t=ACkhMZ1ERbK5k8Z8x0SYWbrfaPoEpedfTG79gUBwM-w',
   ),
   User(
       name: 'Anita Nunes',
       imageUrl:
-          './assets/Anita.png'),
+          'https://media-exp1.licdn.com/dms/image/C4D03AQGhVLnDcjQ8Yg/profile-displayphoto-shrink_200_200/0/1652204123527?e=1671667200&v=beta&t=ltd1G0JGfw42WP7uZsiTPpB0E-JccPX7NiVjyLAi6_A'),
   User(
     name: 'Danubia Carvalho',
     imageUrl:
-    './assets/Danubia.png',
+    'https://media-exp1.licdn.com/dms/image/C4D03AQH73n_SDSjRwA/profile-displayphoto-shrink_200_200/0/1657034346576?e=1671667200&v=beta&t=9qKkR_TQifuU4lSNsT-lZEpkA101SWFapqOkQlqNI1k',
   ),
   User(
     name: 'Gustavo Pereira',
     imageUrl:
-      './assets/Gustavo.png',
+      'https://media-exp1.licdn.com/dms/image/C4D03AQGlcfmDD3ToXA/profile-displayphoto-shrink_200_200/0/1603744739446?e=1671667200&v=beta&t=LhA1-xAccXwXQSl2onCyPxQiIswO-pF7CIVtSt6u4w8',
   ),
   User(
     name: 'David Brooks',
@@ -169,7 +169,7 @@ final List<Post> posts = [
     user: currentUser,
     caption: 'Check out these cool cats',
     timeAgo: '58m',
-    imageUrl: './assets/posts/cats.jpeg',
+    imageUrl: 'https://s2.best-wallpaper.net/wallpaper/1920x1080/1608/Furry-kittens-two-cats_1920x1080.jpg',
     likes: 1202,
     comments: 184,
     shares: 96,
